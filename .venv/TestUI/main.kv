@@ -1,0 +1,125 @@
+<MainScreen>:
+    name: 'main'
+    FloatLayout:
+        size_hint: None, None
+
+	##################
+	##### BUTTONS ####
+        ##################
+
+        DPEAButton:
+            fill_color: 0, 0, 0, 1
+            border_color: 0, 1, 0, 1
+            center_x: root.center_x
+            center_y: root.center_y + 75
+            size: 1000,750
+            border_thickness: 8
+            border_radius: self.height/2
+            fill_radius: self.height/2
+
+#stufffff
+
+        # Quit button
+        DPEAButton:
+            text: 'X'
+            font_size: 23
+            size_hint: None, None
+            size: root.width * 0.015, root.width * 0.015
+            x: root.width/2 + 325
+            y: root.height/2 + 370
+            fill_color: 0, 0, 0, 1
+            border_color: 0, 1, 0, 1
+            border_thickness: 3
+            border_radius: self.height/2
+            fill_radius: self.height/2
+            color: 0, 1, 0, 1
+            on_release: root.quit()
+
+        # Turn on/off gate
+        DPEAButton:
+            id: text1
+            color: 0, 1, 0, 1
+            font_size: 30
+            size: 175, 175
+            text: "?"
+            halign: 'center'
+            valign: 'center'
+            center_x: root.width * 0.25
+            y: root.height * 0.5
+            fill_color: 0, 0, 0, 1
+            border_color: 0, 1, 0, 1
+            border_thickness: 10
+            border_radius: self.height/2
+            fill_radius: self.height/2
+
+        # Move ramp
+        DPEAButton:
+            id: data
+            color: 0, 1, 0, 1
+            font_size: 30
+            size: 175, 175
+            text: "???"
+            halign: 'center'
+            valign: 'center'
+            center_x: root.width * 0.5
+            y: (root.height * 0.5) - 75
+            fill_color: 0, 0, 0, 1
+            border_color: 0, 1, 0, 1
+            size: 300,300
+            border_thickness: 10
+            border_radius: self.height/2
+            fill_radius: self.height/2
+
+        # Activate Staircase
+        DPEAButton:
+            id: text2
+            color: 0, 1, 0, 1
+            font_size: 30
+            size: 175, 175
+            text: "?"
+            halign: 'center'
+            valign: 'center'
+            center_x: root.width * 0.75
+            y: root.height * 0.5
+            fill_color: 0, 0, 0, 1
+            border_color: 0, 1, 0, 1
+            border_thickness: 10
+            border_radius: self.height/2
+            fill_radius: self.height/2
+
+        DPEAButton:
+            id: generate
+            color: 0, 1, 0, 1
+            font_size: 30
+            text: "Generate\nInfo"
+            halign: 'center'
+            valign: 'center'
+            center_x: root.width/2
+            center_y: (root.height/2 - 195)
+            fill_color: 0, 0, 0, 1
+            border_color: 0, 1, 0, 1
+            #size: 300,100
+            border_thickness: 10
+            border_radius: self.height/2
+            fill_radius: self.height/2
+            on_press: root.generate()
+
+
+
+        ##################
+	##### LABELS #####
+        ##################
+
+        Label:
+            id: title
+            text: 'Who Am I?'
+            font_size: 55
+            bold: True
+            center_x: root.width * 0.5
+            halign: 'center'
+            y: root.height * 0.75
+            color: 0, 1, 0, 1
+
+
+
+
