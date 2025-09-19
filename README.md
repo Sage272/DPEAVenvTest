@@ -8,6 +8,19 @@ Protocol for using venvs:
    that the venv needs.
 5. Congratulations! You now have a cloned venv!
 
+When uploading to a RaspberryPi:
+1. Create a new folder on the pi foryour project to go
+2. Go to Settings -> Settings -> Python -> Interpreter
+3. Hit Add Interpreter -> On SSH -> Existing
+4. Select pi@172.17.21.2, then hit Next, wait for it to introspect, and Next agian
+5. Select (if not already selected) Virtualenv Enviornment -> New
+6. Make both the Location and the Sync Folder set to the new folder you made
+7. Check Inherit Global Site Packages (This installs all of your packages for you)
+      WARNING: If you don't check this, the interpreter will not work!
+9. Hit Apply then OK
+
+Once its done setting everything up, you can now run your project on the Pi.
+
 A few extra tid bits:
   Update your requirements.txt with every new package installed to avoid issues down the line.
     (Remember the command is "pip freeze > requirements.txt")
